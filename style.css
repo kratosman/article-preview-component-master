@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --font-famliy-manrope: 'Manrope', sans-serif;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+}
+
+body {
+    background-color: var(--light-grayish-blue);
+}
+
+.wrapper {
+    background-color: white;
+    width: 730px;
+    height: 282px;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.container-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.row-one-image img {
+    height: 282px;
+    width: 285px;
+    border-radius: 7px 0 0 7px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title-header h2 {
+    font-family: var(--font-famliy-manrope);
+    color: var(--very-dark-grayish-blue);
+    font-size: 20px;
+    width: 350px;
+}
+
+.article p {
+    font-family: var(--font-famliy-manrope);
+    color: var(--grayish-blue);
+    font-size: 13px;
+    width: 350px;
+}
+
+.data {
+    display: flex;
+    gap: 17px;
+}
+
+.profile-picture .person-image img {
+    border-radius: 56px;
+}
+
+.profile-picture .name-and-date p {
+    font-family: var(--font-famliy-manrope);
+    font-weight: var(--font-weight-500);
+}
+
+.profile-picture .name-and-date p:nth-child(1) {
+    font-weight: var(--font-weight-700);
+}
+
+.profile-picture .name-and-date p:nth-child(2) {
+    color: var(--grayish-blue);
+}
+
+.share-icon button {
+    width: 32px;
+    height: 32px;
+    border-radius: 27px;
+    background-color: var(--light-grayish-blue);
+    border: none;
+    cursor: pointer;
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-tooltip {
+    background-color: var(--very-dark-grayish-blue);
+    width: 248px;
+    height: 55px;
+    border-radius: 11px;
+    position: absolute;
+    transform: translate(205px, -75px);
+    display: none;
+}
+
+.icon-tooltip::after {
+    content: '';
+    border: var(--very-dark-grayish-blue);
+    border-width: 10px;
+    border-style: solid;
+    position: absolute;
+    margin-left: 110px;
+    transform: translate(50%, -50%) rotate(45deg);
+}
+
+.icon-contents {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    gap: 21px;
+}
+
+.icon-contents p {
+    font-family: var(--font-famliy-manrope);
+    color: var(--desaturated-dark-blue);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.show-open {
+    display: block;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(max-width:500px) {
+    .wrapper {
+        background-color: white;
+        width: 326px;
+        height: 512px;
+        border-radius: 7px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    .container-row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .row-one-image img {
+        height: 200px;
+        width: 326px;
+        border-radius: 7px 7px 0 0px;
+    }
+    .info {
+        margin-top: -45px;
+        width: 326px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .title-header h2 {
+        font-family: var(--font-famliy-manrope);
+        color: var(--very-dark-grayish-blue);
+        font-size: 15px;
+        width: 250px;
+    }
+    .article p {
+        font-family: var(--font-famliy-manrope);
+        color: var(--grayish-blue);
+        font-size: 13px;
+        width: 258px;
+    }
+    .profile-picture {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        margin-top: 25px;
+    }
+    .share-icon button {
+        z-index: 1;
+        position: absolute;
+        transform: translate(-120%, -50%);
+    }
+    .icon-tooltip {
+        background-color: var(--very-dark-grayish-blue);
+        width: 326px;
+        height: 70px;
+        transform: translate(-3.4%, -0%);
+        border-radius: 0px 0px 7px 7px;
+    }
+    .icon-tooltip::after {
+        content: '';
+        border: var(--very-dark-grayish-blue);
+        border-width: 10px;
+        border-style: solid;
+        position: absolute;
+        margin-left: 110px;
+        transform: translate(50%, -50%) rotate(45deg);
+        display: none;
+    }
+}
